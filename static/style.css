@@ -1,0 +1,6 @@
+.cipherDiv {
+  padding: 4px;
+  border: thin solid #0099cc;
+  border-radius: 6px;
+  display: none;
+}

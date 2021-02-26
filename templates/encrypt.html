@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Encrypt text</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/style.css">
+    <script src="../static/scriptEncrypt.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+
+      <div id="pageMsg"></div>
+
+      <h1>Encrypt</h1>
+      <h2>Here you can encrypt a text with ONE TIME PAD</h2>
+
+      <div class="form-group">
+        <label for="plainText" class="sr-only">Insert your plain text message</label>
+        <textarea class="form-control" id="plainText" rows=5></textarea>
+      </div>
+      <div class="form-group">
+        <label for="OTPKey" class="sr-only">Key (you can change it but it's better to use the random-generated one)</label>
+        <textarea class="form-control" id="OTPKey" rows=5></textarea>
+      </div>
+
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary mb-2" id="btnNewKey">Generate new key</button>
+      </div>
+
+      <div class="form-group">
+        <button type="submit" class="btn btn-success mb-2" id="btnEncrypt">Encrypt text</button>
+      </div>
+
+      <label id="labelCiphertext" for="cipherText"></label>
+      <div class="cipherDiv" id="cipherText">
+      </div>
+
+    </div>
+  </body>
+
+</html>
