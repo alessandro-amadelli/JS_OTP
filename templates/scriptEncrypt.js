@@ -13,10 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
     encryptText();
   }
 
-  document.querySelector("#btnCopyKey").onclick = () => {
-    copyKey();
-  }
-
 });
 
 function showPageMsg(msgClass, msgText){
@@ -104,9 +100,4 @@ function writeCypherText(cText) {
   label.innerText = "Ciphertext";
   textDiv.innerText = cText;
   textDiv.style.display = "block";
-}
-
-function copyKey(){
-  document.querySelector("#OTPKey").select()
-  document.execCommand("copy");
 }
