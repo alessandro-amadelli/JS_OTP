@@ -11,6 +11,6 @@ it can't decode the message in any way but by trying and guess the key.
 Very simple implementation and usage
 
 ### Cons
-You have to exchange the key in a secure way.
-The key is the same length of the plain text, meaning that if you have a very large file, the
+You have to exchange the key in a secret and secure way.
+The key is the same length of the original message, meaning that if you have a very large text, the
 key will be large too.

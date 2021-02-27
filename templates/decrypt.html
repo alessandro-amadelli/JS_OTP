@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Decrypt message</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/style.css">
+    <script src="../static/scriptDecrypt.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+
+      <div id="pageMsg"></div>
+
+      <h1>Decrypt</h1>
+      <h2>Here you can decrypt a ciphertext encrypted with ONE TIME PAD</h2>
+
+      <div class="form-group">
+        <label for="cipherText" class="sr-only">Insert encrypted message</label>
+        <textarea class="form-control" id="cipherText" rows=5></textarea>
+      </div>
+      <div class="form-group">
+        <label for="OTPKey" class="sr-only">Insert message key</label>
+        <textarea class="form-control" id="OTPKey" rows=5></textarea>
+      </div>
+
+      <div class="form-group">
+        <button type="submit" class="btn btn-success mb-2" id="btnDecrypt">Decrypt message</button>
+      </div>
+
+      <label id="labelPlaintext" for="plainText"></label>
+      <div class="cipherDiv" id="plainText">
+      </div>
+
+    </div>
+  </body>
+
+</html>
