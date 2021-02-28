@@ -17,6 +17,10 @@ document.addEventListener('DOMContentLoaded', () => {
     copyKey();
   }
 
+  document.querySelector("#btnCopyCipher").onclick = () => {
+    copyCipher();
+  }
+
 });
 
 function showPageMsg(msgClass, msgText){
@@ -58,10 +62,8 @@ function updateKey() {
   } else {
     let cipherDiv = document.querySelector("#cipherText");
     cipherDiv.innerText = "";
-    cipherDiv.style.display = "none";
+    cipherDiv.parentElement.style.display = "none";
 
-    let ciphLabel = document.querySelector("#labelCiphertext");
-    ciphLabel.innerText = "";
   }
   otpKey.value = newKey;
 }
@@ -98,15 +100,27 @@ function writeCypherText(cText) {
   /**
   This function write the ciphertext rendering the div visible
   */
-  let label = document.querySelector("#labelCiphertext");
   let textDiv = document.querySelector("#cipherText");
 
-  label.innerText = "Ciphertext";
   textDiv.innerText = cText;
-  textDiv.style.display = "block";
+  textDiv.parentElement.style.display = "block";
 }
 
 function copyKey(){
   document.querySelector("#OTPKey").select()
   document.execCommand("copy");
+}
+
+function copyCipher() {
+  let newT = document.createElement("textarea");
+  let ciphDiv = document.querySelector("#cipherText");
+
+  newT.value = ciphDiv.innerText;
+  ciphDiv.appendChild(newT);
+
+  newT.select();
+  document.execCommand("copy");
+
+  newT.remove();
+
 }

@@ -1,8 +1,8 @@
 # JS_OTP_ENCRYPTION
 ## JavaScript One Time Pad encryption implementation
 
-This simple web page lets you encrypt and decrypt using One Time Pad (OTP) encryption
-which is a very simple encryption algorithm that offers perfect secrecy via a single
+This very simple web site lets you encrypt and decrypt using One Time Pad (OTP) encryption
+which is an encryption algorithm that offers perfect secrecy via a single
 use key.
 
 ### Pros
