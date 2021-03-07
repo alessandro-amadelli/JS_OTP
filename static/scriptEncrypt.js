@@ -1,22 +1,28 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+  //Event listener to generate encryption key each time the user types a new character in
+  //secret message field
   document.querySelector("#plainText").addEventListener('keyup', event => {
     updateKey();
   });
 
+  //Button to generate a new key
   document.querySelector("#btnNewKey").onclick = () => {
     updateKey();
   }
 
+  //Button to encrypt message
   document.querySelector("#btnEncrypt").onclick = () => {
     encryptText();
   }
 
+  //Button to copy key to clipboard
   document.querySelector("#btnCopyKey").onclick = () => {
     copyKey();
   }
 
+  //Button to copy ciphertext to clipboard
   document.querySelector("#btnCopyCipher").onclick = () => {
     copyCipher();
   }
@@ -24,6 +30,9 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function showPageMsg(msgClass, msgText){
+  /**
+  Shows a message on top of the page, like an error or a warning
+  */
   let msg = document.querySelector("#pageMsg");
 
   msg.setAttribute("class",msgClass);
@@ -73,7 +82,6 @@ function encryptText() {
   The function encrypts text executing the bitwise XOR operation between the
   plain text and the key.
   */
-
   let plaintext = document.querySelector("#plainText");
   let len = plaintext.value.length;
   let otpKey = document.querySelector("#OTPKey");
@@ -107,11 +115,17 @@ function writeCypherText(cText) {
 }
 
 function copyKey(){
+  /**
+  Copy key to clipboard
+  */
   document.querySelector("#OTPKey").select()
   document.execCommand("copy");
 }
 
 function copyCipher() {
+  /**
+  Copy enctypted text to clipboard
+  */
   let newT = document.createElement("textarea");
   let ciphDiv = document.querySelector("#cipherText");
 
@@ -122,5 +136,4 @@ function copyCipher() {
   document.execCommand("copy");
 
   newT.remove();
-
 }
